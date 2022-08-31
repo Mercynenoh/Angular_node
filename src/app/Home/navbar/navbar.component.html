@@ -1,0 +1,7 @@
+<div class="navbar" >
+  <h3 > Project Management</h3>
+  <button  (click)="onLogout()" *ngIf="auth.isLoggedIn()" >Logout</button>
+  <button (click)="onclick()" *ngIf="!auth.isLoggedIn()" >Login</button>
+
+
+</div>

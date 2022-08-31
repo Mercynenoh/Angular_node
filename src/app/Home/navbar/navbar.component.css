@@ -1,0 +1,18 @@
+.navbar{
+  height:70px;
+  width: 100%;
+  background-color: rgb(92, 29, 87);
+  display: flex;
+  justify-content: space-around;
+}
+
+button{
+  height:30px;
+  width:100px;
+ border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+h3{
+  color:white
+}

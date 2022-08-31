@@ -1,0 +1,29 @@
+<div class="products" *ngIf="user.length; else noStudent">
+  <div >
+    <div class="display">
+      <div class="form-group">
+
+      </div>
+     <h3> Assigned Projects</h3>
+        <table>
+          <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Enddate</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+          <tr *ngFor="let projects of  ">
+            <td> </td>
+            <td></td>
+            <th><button>Complete</button></th>
+          </tr>
+        </table>
+    </div>
+  </div>
+</div>
+
+<ng-template #noStudent>
+  <p>No Projects Assigned</p>
+</ng-template>
+

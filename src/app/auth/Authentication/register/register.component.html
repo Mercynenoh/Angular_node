@@ -1,0 +1,37 @@
+<div class="main">
+  <img src="https://th.bing.com/th/id/OIP.vXjfMRBgUS_3aredeRfQVwHaE6?w=269&h=180&c=7&r=0&o=5&dpr=1.77&pid=1.7"/>
+    <div class="login">
+      <h1>SignUp Here</h1>
+      <form [formGroup]="addForms" (ngSubmit)="addUser()">
+      <label>UserName</label>
+      <input  formControlName="username"/>
+      <div *ngIf="!addForms.get('username')!.valid && addForms.get('username')!.touched">
+        <p class="error" *ngIf="addForms.get('username')!.errors!['required']">
+          *username is required.
+        </p>
+      </div>
+
+      <label>Email</label>
+      <input type="email" formControlName="email" />
+      <div *ngIf="!addForms.get('email')!.valid && addForms.get('email')!.touched">
+        <p class="error" *ngIf="addForms.get('email')!.errors!['required']">
+          *email is required.
+        </p>
+      </div>
+      <label>Password</label>
+      <input formControlName="password" type="password"/>
+      <div *ngIf="!addForms.get('password')!.valid && addForms.get('password')!.touched">
+        <p class="error" *ngIf="addForms.get('password')!.errors!['required']">
+          *password is required.
+        </p>
+        <p class="error" *ngIf="addForms.get('password')!.errors!['special']">
+          *special characters required.
+        </p>
+        </div>
+
+      <button>Signup</button>
+    </form>
+    <p>Have an account?</p>
+    <button routerLink="login" id="button">Login</button>
+    </div>
+  </div>

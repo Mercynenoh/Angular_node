@@ -1,0 +1,29 @@
+<div class="main">
+  <form [formGroup]="addForms" (ngSubmit)="onAdd()">
+    <label>Project Name</label>
+    <input  formControlName="name"/>
+    <div *ngIf="!addForms.get('name')!.valid && addForms.get('name')!.touched">
+      <p class="error" *ngIf="addForms.get('name')!.errors!['required']">
+        *name is required.
+      </p>
+    </div>
+
+    <label>Description</label>
+    <input type="text" formControlName="description" />
+    <div *ngIf="!addForms.get('description')!.valid && addForms.get('description')!.touched">
+      <p class="error" *ngIf="addForms.get('description')!.errors!['required']">
+        *description is required.
+      </p>
+    </div>
+    <label>End Date</label>
+    <input formControlName="enddate" type="date"/>
+    <label>email</label>
+    <select formControlName="email">
+      <option *ngFor="let item of user$ | async" value={{item.email}} >{{item.email}}</option>
+    </select>
+    <button>Add Project</button>
+  </form>
+  </div>
+<div class="projects">
+  
+</div>

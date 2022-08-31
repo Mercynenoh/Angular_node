@@ -1,0 +1,19 @@
+.main{
+  display:flex;
+  gap:10%;
+
+}
+.sidebar{
+  width: 200px;
+  background-color: goldenrod;
+  height: 90vh;
+}
+button{
+  background-color: white;
+  width:150px;
+  color:black;
+  margin:5%;
+  height:30px;
+  border:none;
+  border-radius: 8px;
+}
