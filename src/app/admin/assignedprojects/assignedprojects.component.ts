@@ -13,6 +13,14 @@ export class AssignedprojectsComponent implements OnInit {
   constructor(private service:AdminService ) { }
 
   ngOnInit(): void {
+    this.showall()
+  }
+  deleteproject(ProjectsId:string){
+    this.service.deleteproject(ProjectsId).subscribe(result=>{
+    this.showall()
+    })
+  }
+  showall(){
     this.service.showProject().subscribe(response=>{
       this.project=response
 

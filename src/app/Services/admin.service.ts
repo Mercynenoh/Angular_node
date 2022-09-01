@@ -23,4 +23,7 @@ export class AdminService {
   showProject():Observable<Project[]>{
     return this.http.get<Project[]>(this.baseUrl+'get/')
   }
+  deleteproject(ProjectsId:string){
+    return this.http.delete(`${this.baseUrl}${ProjectsId}`)
+  }
 }

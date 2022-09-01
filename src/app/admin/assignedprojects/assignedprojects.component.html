@@ -7,10 +7,10 @@
      <h3> Assigned Projects</h3>
         <table>
           <tr>
-          <th>Name</th>
+          <th>Project Name</th>
           <th>Description</th>
           <th>Enddate</th>
-          <th>Email</th>
+          <th>Assigned to:</th>
           <th></th>
         </tr>
           <tr *ngFor="let projects of project ">
@@ -18,7 +18,7 @@
             <td>{{projects.description}}</td>
             <td>{{projects.enddate}}</td>
             <td>{{projects.email}}</td>
-            <th><button>Delete</button></th>
+            <th><button (click)="deleteproject(projects.ProjectsId)">Delete</button></th>
           </tr>
         </table>
     </div>

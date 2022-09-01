@@ -17,8 +17,8 @@ export class UserService {
       observe:'body'
     }
   }
-  showmyProject():Observable<Project[]>{
-    return this.http.get<Project[]>(this.baseUrl+'/${email}')
+  showmyProject(email:string):Observable<Project[]>{
+    return this.http.get<Project[]>(`${this.baseUrl}${email}`)
   }
 
 }

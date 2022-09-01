@@ -1,5 +1,7 @@
 <div class="main">
+
   <form [formGroup]="addForms" (ngSubmit)="onAdd()">
+    <h3>Assign a new Project</h3><br>
     <label>Project Name</label>
     <input  formControlName="name"/>
     <div *ngIf="!addForms.get('name')!.valid && addForms.get('name')!.touched">
@@ -25,5 +27,5 @@
   </form>
   </div>
 <div class="projects">
-  
+
 </div>

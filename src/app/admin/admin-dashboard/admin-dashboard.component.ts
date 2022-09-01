@@ -26,6 +26,6 @@ onAdd(){
   this.router.navigate(['admin/add'])
 }
 onAssigned(){
-  this.router.navigate(['admin/assigned'])
+  this.router.navigate(['admin'])
 }
 }

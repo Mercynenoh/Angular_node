@@ -31,7 +31,7 @@ export class AddProjectComponent implements OnInit {
 onAdd(){
 this.service.addProject(this.addForms.value).subscribe(response=>{
 console.log(response);
-this.router.navigate(['admin/assigned'])
+this.router.navigate(['admin'])
 })
 }
 onget(){

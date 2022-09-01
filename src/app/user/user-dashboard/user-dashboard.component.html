@@ -1,4 +1,4 @@
-<div class="products" *ngIf="user.length; else noStudent">
+<div class="products" *ngIf="project.length; else noTask">
   <div >
     <div class="display">
       <div class="form-group">
@@ -7,23 +7,25 @@
      <h3> Assigned Projects</h3>
         <table>
           <tr>
-          <th>Name</th>
+          <th>Project Name</th>
           <th>Description</th>
           <th>Enddate</th>
-          <th>Email</th>
-          <th></th>
+          <th>Assigned to:</th>
         </tr>
-          <tr *ngFor="let projects of  ">
-            <td> </td>
-            <td></td>
-            <th><button>Complete</button></th>
+          <tr *ngFor="let projects of project">
+            <td> {{projects.name}}</td>
+            <td>{{projects.description}}</td>
+            <td>{{projects.enddate}}</td>
+            <td>{{projects.email}}</td>
+            <th><button (click)="update()">Delete</button></th>
           </tr>
         </table>
     </div>
   </div>
 </div>
 
-<ng-template #noStudent>
-  <p>No Projects Assigned</p>
+<ng-template #noTask>
+  <p>No Projects</p>
 </ng-template>
+<!-- <router-outlet></router-outlet> -->
 

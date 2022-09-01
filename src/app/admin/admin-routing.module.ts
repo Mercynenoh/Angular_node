@@ -11,7 +11,7 @@ import { AssignedprojectsComponent } from './assignedprojects/assignedprojects.c
 const routes: Routes = [
   {path: 'admin', canActivateChild:[AuthGuard], component: AdminDashboardComponent, children:[
     {path: 'add',  component:AddProjectComponent},
-    {path: 'assigned',  component:AssignedprojectsComponent},
+    {path: '',  component:AssignedprojectsComponent},
   ]},
 ]
 
