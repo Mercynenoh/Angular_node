@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
 
     this.addForms = this.fb.group({
       username:[null,[Validators.required]],
-      email: [null,[Validators.required,Validators.email, this.checkemail.bind(this)]],
+      email: [null,[Validators.required ,Validators.pattern('^[A-Za-z0-9._%+-]+@thejitu.com$'),]],
       password: [null,[Validators.required,this.checkPassword]],
     });
   }
@@ -32,12 +32,12 @@ export class RegisterComponent implements OnInit {
     const special=/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"]+/.test(value)
     return !special? {special:true} :null
   }
-  checkemail(control:FormControl):{[s:string]:boolean}|null{
-    if(this.allowed.includes(control.value)){
-     return {forbidden:false}
-      }
-      return null
-   }
+  // checkemail(control:FormControl):{[s:string]:boolean}|null{
+  //   if(this.allowed.includes(control.value)){
+  //    return {forbidden:false}
+  //     }
+  //     return null
+  //  }
 
   addUser() {
     if(this.addForms.valid){
@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
       }
     })
   }else{
-    alert('details already exist')
+    // alert('details already exist')
   }
 }
 

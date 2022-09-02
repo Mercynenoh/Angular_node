@@ -2,13 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Project } from 'src/app/Interfaces/project';
 import { AdminService } from 'src/app/Services/admin.service';
+import { SearchPipe } from 'src/app/Pipes/search.pipe';
 
 @Component({
   selector: 'app-assignedprojects',
   templateUrl: './assignedprojects.component.html',
   styleUrls: ['./assignedprojects.component.css']
 })
+
 export class AssignedprojectsComponent implements OnInit {
+  filter=''
   project:Project[]=[]
   constructor(private service:AdminService ) { }
 
