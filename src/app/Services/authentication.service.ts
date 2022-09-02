@@ -33,4 +33,8 @@ export class AuthenticationService {
   isLoggedIn(){
     return !!localStorage.getItem('token')
   }
+  checkstatus(){
+    return !!localStorage.getItem('role')
+ 
+  }
 }

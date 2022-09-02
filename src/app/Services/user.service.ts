@@ -20,5 +20,8 @@ export class UserService {
   showmyProject(email:string):Observable<Project[]>{
     return this.http.get<Project[]>(`${this.baseUrl}${email}`)
   }
+  updateproject(ProjectsId:string){
+    return this.http.put<any>(`${this.baseUrl}${ProjectsId}`,ProjectsId)
+  }
 
 }

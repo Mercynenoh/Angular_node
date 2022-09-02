@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './Authentication/login/login.component';
 import { AuthRoutingModule } from './auth-routing.module';
-
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -18,7 +18,8 @@ import { AuthRoutingModule } from './auth-routing.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    SharedModule
 
   ],
   exports:[

@@ -17,6 +17,9 @@
         <p class="error" *ngIf="addForms.get('email')!.errors!['required']">
           *email is required.
         </p>
+        <p class="error" *ngIf="addForms.get('email')!.errors!['forbidden']">
+          *jitu email required
+        </p>
       </div>
       <label>Password</label>
       <input formControlName="password" type="password"/>

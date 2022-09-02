@@ -19,10 +19,10 @@ export class LoginComponent implements OnInit {
     this.service.loginUser(this.form.value).subscribe(response=>{
       localStorage.setItem('token', response.token)
       localStorage.setItem('email', response.user.email)
-      console.log(response);
-      if(response.user.role==='admin'){
+      localStorage.setItem('role', response.user.role)
+    let role = localStorage.getItem('role')
+      if(role==='admin'){
       this.router.navigate(['admin'])
-
       }else{
         this.router.navigate(['user'])
       }

@@ -12,7 +12,7 @@ import { UserService } from 'src/app/Services/user.service';
 })
 export class UserDashboardComponent implements OnInit {
 project:Project[]=[]
-// user:user[]=[]
+complete=false
   constructor( private service:UserService, private services:AuthenticationService) { }
 
   ngOnInit(): void {
@@ -26,7 +26,11 @@ getProject(email:string){
 
    })
 }
-update(){
-  
+update(ProjectsId:string){
+  this.service.updateproject(ProjectsId).subscribe(response=>{
+    // this.project=response
+    this.complete=true
+  })
+
 }
 }

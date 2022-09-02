@@ -7,20 +7,26 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { NavbarComponent } from './Home/navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
+import { NotfoundComponent } from './notfound/notfound.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     AdminModule,
     AuthModule,
     UserModule,
-    FormsModule
-
+    FormsModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

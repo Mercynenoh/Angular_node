@@ -5,6 +5,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { AssignedprojectsComponent } from './assignedprojects/assignedprojects.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -18,7 +19,8 @@ import { AssignedprojectsComponent } from './assignedprojects/assignedprojects.c
     CommonModule,
     AdminRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class AdminModule { }

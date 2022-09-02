@@ -11,13 +11,16 @@
           <th>Description</th>
           <th>Enddate</th>
           <th>Assigned to:</th>
+          <th>Delete</th>
+          <th>Status</th>
         </tr>
           <tr *ngFor="let projects of project">
             <td> {{projects.name}}</td>
             <td>{{projects.description}}</td>
             <td>{{projects.enddate}}</td>
             <td>{{projects.email}}</td>
-            <th><button (click)="update()">Delete</button></th>
+            <th><button (click)="update(projects.ProjectsId)">Complete</button></th>
+            <td><p *ngIf=complete>Completed</p></td>
           </tr>
         </table>
     </div>
@@ -27,5 +30,4 @@
 <ng-template #noTask>
   <p>No Projects</p>
 </ng-template>
-<!-- <router-outlet></router-outlet> -->
 

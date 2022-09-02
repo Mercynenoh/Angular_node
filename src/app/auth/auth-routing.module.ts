@@ -9,6 +9,7 @@ import { LoginComponent } from './Authentication/login/login.component';
 const routes: Routes = [
   { path: '', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+
 ];
 
 @NgModule({
