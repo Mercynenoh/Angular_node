@@ -2,6 +2,7 @@
   <img src="https://th.bing.com/th/id/OIP.vXjfMRBgUS_3aredeRfQVwHaE6?w=269&h=180&c=7&r=0&o=5&dpr=1.77&pid=1.7"/>
     <div class="login">
       <h1>SignUp Here</h1>
+      <p *ngIf="valid">Invalid credentials</p>
       <form [formGroup]="addForms" (ngSubmit)="addUser()">
       <label>UserName</label>
       <input  formControlName="username"/>
@@ -14,8 +15,8 @@
       <label>Email</label>
       <input type="email" formControlName="email" />
       <div *ngIf="!addForms.get('email')!.valid && addForms.get('email')!.touched">
-        <p class="error" *ngIf="addForms.get('email')!.errors!['required']">
-          *email is required.
+        <p class="error" *ngIf="addForms.get('email')?.invalid && addForms.get('email')?.dirty">
+          *email must contain @thejitu.com.
         </p>
       </div>
       <label>Password</label>

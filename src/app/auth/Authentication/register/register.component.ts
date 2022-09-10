@@ -11,6 +11,7 @@ import { AuthenticationService } from 'src/app/Services/authentication.service';
 export class RegisterComponent implements OnInit {
   allowed=['@thejitu.com']
   regSuccess = false
+  valid=false
 
   addForms!: FormGroup;
 
@@ -48,7 +49,7 @@ export class RegisterComponent implements OnInit {
       }
     })
   }else{
-    // alert('details already exist')
+  this.valid=true
   }
 }
 
